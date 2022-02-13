@@ -1,22 +1,7 @@
 window.onload = () => {
   button = document.getElementById("button1");
-  button.addEventListener("click", function () {
+  button.addEventListener("click", () => {
     console.log("here");
     document.getElementById("helloMessage").innerHTML = "Hello, world!";
-
-    const inventory = {
-      sunglasses: 1900,
-      pants: 1088,
-      bags: 1344,
-    };
-
-    // Write your code below:
-    const myExecutor = (resolve, reject) => {
-      if (inventory.sunglasses > 0) {
-        resolve("Sunglasses order processed.");
-      } else {
-        reject("That item is sold out.");
-      }
-    };
   });
 };
