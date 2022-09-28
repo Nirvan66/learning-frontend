@@ -4,7 +4,7 @@ export default class InputTodo extends Component {
   state = { newTaskTitle: "" };
 
   todoInputChange = (e) => {
-    this.setState(() => ({ ...this.state, [e.target.name]: e.target.value }));
+    this.setState(() => ({[e.target.name]: e.target.value }));
   };
 
   render() {
@@ -14,7 +14,7 @@ export default class InputTodo extends Component {
           type="text"
           className="input-text"
           placeholder="Add Todo..."
-          value={this.state.task}
+          value={this.state.newTaskTitle}
           onChange={(e) => this.todoInputChange(e)}
           name="newTaskTitle"
         />
